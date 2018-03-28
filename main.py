@@ -17,7 +17,7 @@ def get_first_arg(*args):
 
 
 if __name__ == '__main__':
-    scrapy.cmdline.execute(argv=['scrapy','crawl','fundInfoSpider'])
+    # scrapy.cmdline.execute(argv=['scrapy','crawl','fundInfoSpider'])
 
     # Fund Value
     process = CrawlerProcess(get_project_settings())
