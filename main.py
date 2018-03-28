@@ -26,7 +26,6 @@ if __name__ == '__main__':
     fund_value = pd.read_csv(constants.OUTPUT_FILE_PATH)
     fund_value.to_csv(constants.FUND_VALUE)
     #Fund Info
-    process = CrawlerProcess(get_project_settings())
     process.crawl('fundInfoSpider')
     fund_info = pd.read_csv(constants.OUTPUT_FILE_PATH)
     fund_info.to_csv(constants.FUND_INFO)
