@@ -17,7 +17,7 @@ def get_first_arg(*args):
 
 
 if __name__ == '__main__':
-    # scrapy.cmdline.execute(argv=['scrapy','crawl','fundInfoSpider'])
+    scrapy.cmdline.execute(argv=['scrapy','crawl','fundInfoSpider'])
 
     # Fund Value
     process = CrawlerProcess(get_project_settings())
@@ -28,7 +28,6 @@ if __name__ == '__main__':
     #Fund Info
     process = CrawlerProcess(get_project_settings())
     process.crawl('fundInfoSpider')
-    process.start()
     fund_info = pd.read_csv(constants.OUTPUT_FILE_PATH)
     fund_info.to_csv(constants.FUND_INFO)
 
